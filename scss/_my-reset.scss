@@ -1,0 +1,273 @@
+// _my-reset.scss ____________________________
+
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+// reset BOOTSTRAP button styles on hover and focus
+.btn-primary.focus,
+.btn-primary:focus {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: none;
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+    background: $background-color;
+
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: Russo One;
+    font-style: normal;
+    font-weight: normal;
+    @include responsive-font-size (46, 30);
+    @include responsive-line-height (59.8, 39);
+    color: $text-color;
+    @include responsive-margin-bottom(80, 60);
+}
+
+.heading-h2 {
+    width: 100%;
+    text-align: left;
+}
+
+span,
+p,
+a,
+input {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+    color: $text-color;
+}
+
+// / reset BOOTSTRAP button styles on hover and focus
+
+a,
+aside,
+nav,
+footer,
+header,
+section {
+    display: block;
+    color: black;
+}
+
+
+
+// .container - NO LONGER NEEDED!
+section,
+header,
+footer {
+    padding: 0 15px;
+}
+
+@media (min-width: 575.98px) {
+
+    section,
+    header,
+    footer {
+        padding: 0 calc(50% - 270px);
+    }
+}
+
+@media (min-width: 767.98px) {
+
+    section,
+    header,
+    footer {
+        padding: 0 calc(50% - 360px);
+    }
+}
+
+@media (min-width: 991.98px) {
+
+    section,
+    header,
+    footer {
+        padding: 0 calc(50% - 480px);
+    }
+}
+
+@media (min-width: 1199.98px) {
+
+    section,
+    header,
+    footer {
+        padding: 0 calc(50% - 590px);
+    }
+}
+
+// .container - NO LONGER NEEDED!
+
+
+
+
+input,
+button,
+textarea {
+    font-family: Source Sans Pro;
+}
+
+input::-moz-placeholder {
+    color: #DADADA;
+}
+
+input::-webkit-input-placeholder {
+    color: #DADADA;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+svg {
+    overflow: visible;
+}
+
+img {
+    max-width: 100%;
+    object-fit: contain;
+    background-color: $background-color;
+}
+
+
+// Стили для хлебных крошек
+.breadcrumb {
+    padding: 0;
+    background-color: transparent;
+    @include responsive-margin-bottom(0, 0);
+
+    &-item {
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: normal;
+        @include responsive-font-size(18, 12);
+        @include responsive-line-height(27, 18);
+        @include responsive-margin-right(21, 15);
+
+        a {
+            color: $text-color;
+        }
+    }
+
+    .breadcrumb-item+.breadcrumb-item {
+        // padding-left: .5rem;
+        @include responsive-padding-left(26, 20);
+        position: relative;
+        color: #DADADA;
+    }
+
+    .breadcrumb-item+.breadcrumb-item::before {
+        position: absolute;
+        @include responsive-top(10, 4);
+        left: 0px;
+        // @include responsive-margin-right(21, 15);
+        color: #6c757d;
+        content: "";
+        background-image: url('../img/breadcrumb-arrow.svg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 5px;
+        height: 9px;
+    }
+
+    &-item .active {
+        position: relative;
+        @include responsive-font-size(18, 12);
+        @include responsive-line-height(27, 18);
+    }
+}
+
+// Стили для хлебных крошек
+
+// Стили для свайп указателя
+.swipe-pointer {
+    @include responsive-width(60, 40);
+    @include responsive-height(60, 40);
+    z-index: 20;
+    position: absolute;
+    right: 3vw;
+    bottom: 40%;
+    fill: $accent-color;
+}
+
+// Стили для свайп указателя
+
+
+
+
+
+
+
+
+
+
+
+
+// _my-reset.scss ____________________________

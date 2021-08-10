@@ -1,0 +1,277 @@
+// _variables.scss ____________________________
+
+// ============= VARIABLES =============
+
+$background-color: #151F28;
+$text-color-white-on-black: #F4F4F4;
+$text-color: #F4F4F4;
+$accent-color: #00E991;
+
+// $menu-item-color: #FFFDFE;
+// $menu-item-color-hover: #FFFDFE;
+// $button-color-hover: #FFFDFE;
+// $placeholder-color: #B1B1B1;
+// $background-footer: #3D3E57;
+
+
+
+// ============= MIXINS =============
+// mixin call -	@include responsive-font(40, 24);
+
+
+@mixin display-flex($flex-direction, $justify-content, $align-items) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-wrap: wrap;
+}
+
+// smooth EFFECT | @include smoothness(text-decoration, 0.8s |
+@mixin smoothness($property-css, $transition-delay) {
+    transition: $property-css $transition-delay;
+}
+
+// &:hover {
+//     background: $button-color-OnHover;
+//     @include smoothness(background-color, .8s);
+// }
+
+
+// mixin for ADAPTIVE FONT
+$max-width: 1920;
+
+
+@mixin responsive-font-size($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    font-size: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-line-height($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    line-height: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-width($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    width: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+
+@mixin responsive-max-width($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    max-width: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-min-width($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    min-width: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-height($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    height: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-min-height($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    min-height: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-padding-top($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    padding-top: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-padding-bottom($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    padding-bottom: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-padding-left($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    padding-left: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-padding-right($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    padding-right: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-padding-left-right($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    padding-left: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+    padding-right: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-padding-top-bottom($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    padding-top: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+    padding-bottom: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-margin-top($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    margin-top: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-margin-right($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    margin-right: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-margin-bottom($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    margin-bottom: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-margin-left($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    margin-left: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-margin-left-right($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    margin-left: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+    margin-right: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-top($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    top: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-bottom($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    bottom: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-left($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    left: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-right($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    right: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-top-right($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    top: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+    right: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-border-radius($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    border-radius: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+
+
+// ============= ANIMATION templates =============
+// animation: upArrowAnim infinite 2s;
+
+@keyframes upArrowAnim {
+    0% {
+        transform: translate(-50%, -65%);
+    }
+
+    50% {
+        transform: translate(-50%, -25%);
+    }
+
+    100% {
+        transform: translate(-50%, -65%);
+    }
+}
+
+// animation for swipe-pointer
+@keyframes swipePointerAnim {
+    0% {
+        @include responsive-margin-right(0, 0);
+        opacity: 0.2;
+    }
+
+    20% {
+        @include responsive-margin-right(50, 20);
+        opacity: 0.8;
+    }
+
+    100% {
+        @include responsive-margin-right(0, 0);
+        opacity: 0.2;
+    }
+}
+
+// animation for swipe-pointer
+
+
+// animation for the wave (smooth appearance)
+@keyframes waveAnim {
+    0% {
+        // @include responsive-padding-top(0, 0);
+        // opacity: 0.2;
+        transform: translate(0px, 0px);
+    }
+
+    20% {
+        // @include responsive-padding-top(20, 20);
+        // opacity: 1;
+        transform: translate(0px, -10px);
+    }
+
+    30% {
+        // @include responsive-padding-top(0, 0);
+        // opacity: 0.2;
+        transform: translate(0px, 0px);
+    }
+
+    40% {
+        // @include responsive-padding-top(20, 20);
+        // opacity: 1;
+        transform: translate(0px, -10px);
+    }
+
+    50% {
+        // @include responsive-padding-top(0, 0);
+        // opacity: 0.2;
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        // @include responsive-padding-top(0, 0);
+        // opacity: 0.2;
+        transform: translate(0px, 0px);
+    }
+}
+
+// animation for the wave (smooth appearance)
+
+
+
+// ============= ANIMATION templates =============
