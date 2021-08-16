@@ -1,5 +1,7 @@
 // _fonts.scss ____________________________
 
+
+// СОЛИДНЫЙ ШРИФТ ДЛЯ ЗАГОЛОВКОВ
 @font-face {
     font-family: 'Oswald';
     src: url('../fonts/Oswald-Regular.eot');
@@ -24,6 +26,9 @@
     font-display: swap;
 }
 
+// / СОЛИДНЫЙ ШРИФТ ДЛЯ ЗАГОЛОВКОВ
+
+// САМЫЙ ПОПУЛЯРНЫЙ ШРИФТ В МИРЕ
 @font-face {
     font-family: 'Roboto';
     src: url('../fonts/Roboto-Light.eot');
@@ -47,6 +52,8 @@
     font-style: normal;
     font-display: swap;
 }
+
+// / САМЫЙ ПОПУЛЯРНЫЙ ШРИФТ В МИРЕ
 
 
 

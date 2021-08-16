@@ -1,0 +1,70 @@
+// _section-specification.scss ____________________________
+
+.section-specification {
+
+    padding: 70px 0px 30px 0px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0px auto;
+    background-color: $text-color-white-on-black;
+    @include display-flex(column, flex-start, center);
+
+    &__main-heading {
+        color: $background-color;
+        text-align: center;
+        font-family: Oswald;
+        font-style: normal;
+        font-weight: normal;
+        @include responsive-font-size(32, 26);
+        @include responsive-line-height(42, 34);
+        @include responsive-margin-bottom(20, 15);
+    }
+
+    &__text {
+        color: $background-color;
+        font-family: 'Roboto';
+        font-weight: normal;
+        font-style: normal;
+        text-align: center;
+        @include responsive-font-size(21, 15);
+        @include responsive-line-height(29, 21);
+        @include responsive-margin-bottom(25, 20);
+
+        &_color {
+            color: $accent-color;
+            font-family: 'Roboto';
+            font-weight: normal;
+            font-style: normal;
+            text-align: center;
+            @include responsive-font-size(21, 15);
+            @include responsive-line-height(29, 21);
+        }
+    }
+
+    &__link {
+        color: $background-color;
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-style: normal;
+        text-align: normal;
+        @include responsive-font-size(21, 15);
+        @include responsive-line-height(29, 21);
+        @include responsive-padding-left-right(10, 7);
+        @include responsive-padding-top-bottom(8, 5);
+        border: 0.8px solid $background-color;
+        border-radius: 3px;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+// / _section-specification.scss ____________________________

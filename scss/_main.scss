@@ -1,9 +1,50 @@
 // _main.scss ____________________________
 
 
-.main {
-    min-height: 100vh;
+
+.page {
+    padding: 70px 0px 30px 0px;
+
+    &__section {
+        padding: 30px;
+        max-width: 1200px;
+        margin: 0px auto;
+    }
+
+
+    &__specification {
+        background-color: #794f45;
+    }
+
+    &__section_2 {
+        background-color: #77608d;
+    }
+
+    &__section_3 {
+        background-color: #7a956b;
+    }
+
+    &__title {
+        font-size: 40px;
+        margin: 0px 0px 20px 0px;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    &__text p {
+        margin: 0px 0px 20px 0px;
+    }
+
+    &__sub-title {
+        font-size: 30px;
+        margin: 0px 0px 20px 0px;
+    }
+
 }
+
 
 
 
