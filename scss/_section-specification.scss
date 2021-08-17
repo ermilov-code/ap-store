@@ -1,11 +1,11 @@
 // _section-specification.scss ____________________________
 
 .section-specification {
-
-    padding: 70px 0px 30px 0px;
-    padding: 30px;
-    max-width: 1200px;
-    margin: 0px auto;
+    // padding-top: 30px;
+    // padding: 70px 0px 30px 0px;
+    // padding: 30px;
+    // max-width: 1200px;
+    // margin: 0px auto;
     background-color: $text-color-white-on-black;
     @include display-flex(column, flex-start, center);
 
@@ -49,11 +49,26 @@
         text-align: normal;
         @include responsive-font-size(21, 15);
         @include responsive-line-height(29, 21);
-        @include responsive-padding-left-right(10, 7);
-        @include responsive-padding-top-bottom(8, 5);
+        @include responsive-padding-left-right(17, 13);
+        @include responsive-padding-top-bottom(8, 4);
         border: 0.8px solid $background-color;
         border-radius: 3px;
+        @include responsive-margin-bottom(40, 30);
+
+        &:hover {
+            color: $text-color-white-on-black;
+            background-color: $background-color;
+            transition: all 0.8s ease 0s;
+        }
+
     }
+
+    &__img {
+        @include responsive-height(440, 280);
+
+    }
+
+
 
 
 

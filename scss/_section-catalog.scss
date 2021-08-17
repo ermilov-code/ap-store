@@ -1,0 +1,58 @@
+// _section-catalog.scss ____________________________
+
+
+
+.section-catalog {
+
+    background-color: $text-color-white-on-black;
+    @include display-flex(column, flex-start, center);
+    border-top: 0.8px solid $gray-horizontal-line;
+    @include responsive-padding-top-bottom (40, 30);
+
+
+    .products {
+
+        @include display-flex(column, flex-start, flex-start);
+
+        &__item {
+            @include display-flex(row, flex-start, flex-start);
+            // flex-wrap: wrap;
+        }
+
+        &__name {
+            width: 100%;
+            text-align: left;
+            color: $background-color;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            @include responsive-font-size(21, 15);
+            @include responsive-line-height(29, 21);
+            @include responsive-margin-bottom(25, 20);
+
+
+        }
+
+        &__img {
+            height: 100px;
+        }
+
+
+
+        &__price {}
+
+        .buy-btn {}
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+// _section-catalog.scss ____________________________

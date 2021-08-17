@@ -63,7 +63,7 @@ h4 {
     font-weight: normal;
     @include responsive-font-size (46, 30);
     @include responsive-line-height (59.8, 39);
-    color: $text-color;
+    color: #151F28;
     @include responsive-margin-bottom(80, 60);
 }
 
@@ -80,7 +80,7 @@ input {
     font-style: normal;
     font-weight: normal;
     margin: 0;
-    color: $text-color;
+    color: #151F28;
 }
 
 // / reset BOOTSTRAP button styles on hover and focus
@@ -192,8 +192,42 @@ svg {
 img {
     max-width: 100%;
     object-fit: contain;
-    background-color: $background-color;
+    // background-color: $background-color;
 }
+
+
+// .container БОЛЬШЕ НЕ НУЖЕН!
+
+section {
+    padding: 20px 15px;
+}
+
+@media (min-width: 575.98px) {
+    section {
+        padding: 20px calc(50% - 270px);
+    }
+}
+
+@media (min-width: 767.98px) {
+    section {
+        padding: 25px calc(50% - 360px);
+    }
+}
+
+@media (min-width: 991.98px) {
+    section {
+        padding: 30px calc(50% - 480px);
+    }
+}
+
+@media (min-width: 1199.98px) {
+    section {
+        padding: 40px calc(50% - 590px);
+    }
+}
+
+// .container БОЛЬШЕ НЕ НУЖЕН!
+
 
 
 // Стили для хлебных крошек
