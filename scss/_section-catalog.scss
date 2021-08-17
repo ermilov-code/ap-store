@@ -8,16 +8,30 @@
     @include display-flex(column, flex-start, center);
     border-top: 0.8px solid $gray-horizontal-line;
     @include responsive-padding-top-bottom (40, 30);
+    @include responsive-padding-left-right (0, 0);
 
 
     .products {
 
         @include display-flex(column, flex-start, flex-start);
 
+        // :nth-child(1) {
+        //     border-top: 9px solid #c9c5c59c;
+        // }
+
+        &:nth-child(1) {
+            border-top: 9px solid #c9c5c59c;
+        }
+
         &__item {
             @include display-flex(row, flex-start, flex-start);
             // flex-wrap: wrap;
+            @include responsive-padding(20, 15);
+            @include responsive-padding-left-right (30, 20);
+            border-bottom: 9px solid #c9c5c59c;
         }
+
+
 
         &__name {
             width: 100%;
@@ -29,19 +43,45 @@
             @include responsive-font-size(21, 15);
             @include responsive-line-height(29, 21);
             @include responsive-margin-bottom(25, 20);
-
-
         }
 
         &__img {
-            height: 100px;
+            width: 50%;
+            height: 159px;
+            width: 50%;
+        }
+
+        &__description {
+            @include display-flex(column, flex-start, flex-start);
+            @include responsive-padding-top (30, 20);
+            width: 50%;
+            min-height: 150px;
         }
 
 
 
-        &__price {}
+        &__price {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            @include responsive-font-size(21, 15);
+            @include responsive-line-height(29, 21);
+            @include responsive-margin-bottom(12, 8);
 
-        .buy-btn {}
+        }
+
+        .buy-btn {
+            width: 100%;
+            text-align: left;
+            color: $accent-color;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            @include responsive-font-size(21, 15);
+            @include responsive-line-height(29, 21);
+            @include responsive-margin-bottom(12, 8);
+            background-color: transparent;
+        }
 
     }
 }

@@ -2,21 +2,21 @@
 
 const products = [
 
-    {id: 1, title: 'Apple iPhone XR, 128 ГБ, белый', price: 52990, img: "img/1-AppleiPhoneXR,128ГБ,белый,52990₽.png"},
+    {id: 1, title: 'Apple iPhone XR, 128 ГБ, белый', price: "52 990", img: "img/1-AppleiPhoneXR,128ГБ,белый,52990₽.png"},
 
-	{id: 4, title: 'Apple iPhone XR, 128 ГБ, (PRODUCT)RED', price: 52990, img: "img/4-AppleiPhoneXR,128ГБ,(PRODUCT)RED,52990₽.png"},
+	{id: 4, title: 'Apple iPhone XR, 128 ГБ, (PRODUCT)RED', price: "52 990", img: "img/4-AppleiPhoneXR,128ГБ,(PRODUCT)RED,52990₽.png"},
 
-	{id: 2, title: 'Apple iPhone 11, 256 ГБ, фиолетовый', price: 67990, img: "img/2-AppleiPhone11,256ГБ,фиолетовый,67990₽.png"},
+	{id: 2, title: 'Apple iPhone 11, 256 ГБ, фиолетовый', price: "67 990", img: "img/2-AppleiPhone11,256ГБ,фиолетовый,67990₽.png"},
 
-	{id: 6, title: 'Apple iPad 10,2 Wi-Fi 32 ГБ, золотой', price: 29990, img: "img/6-AppleiPad10,2Wi-Fi32ГБ,золотой,29990₽.png"},
+	{id: 6, title: 'Apple iPad 10,2 Wi-Fi 32 ГБ, золотой', price: "29 990", img: "img/6-AppleiPad10,2Wi-Fi32ГБ,золотой,29990₽.png"},
 
-	{id: 3, title: 'Apple iPad Pro (2021) Wi-Fi+Cellular 2 ТБ', price: 219990, img: "img/3-AppleiPadPro(2021)12,9Wi-Fi+Cellular2ТБ,219990₽.png"},
+	{id: 3, title: 'Apple iPad Pro (2021) Wi-Fi+Cellular 2 ТБ', price: "219 990", img: "img/3-AppleiPadPro(2021)12,9Wi-Fi+Cellular2ТБ,219990₽.png"},
 
-	{id: 5, title: 'Apple Watch Series 6, 44 мм', price: 39490, img: "img/5-AppleWatchSeries6,44мм,39490₽.png"},
+	{id: 5, title: 'Apple Watch Series 6, 44 мм', price: "39 490", img: "img/5-AppleWatchSeries6,44мм,39490₽.png"},
 
-	{id: 7, title: 'Apple MacBook Pro 13 (M1, 2020) 8ГБ, 512 ГБ SSD', price: 137990, img: "img/7-AppleMacBookPro13(M1,2020)8ГБ,512ГБSSD,137990₽.png"},
+	{id: 7, title: 'Apple MacBook Pro 13 (M1, 2020) 8ГБ, 512 ГБ SSD', price: "13 7990", img: "img/7-AppleMacBookPro13(M1,2020)8ГБ,512ГБSSD,137990₽.png"},
 
-	{id: 8, title: 'Apple iMac 24 Retina 4,5, M1, 8 ГБ, 256 ГБ SSD', price: 129990, img: "img/8-AppleiMac24Retina4,5K,M1(8CCPU,7CGPU),8ГБ,256ГБSSD,129990₽.png"},
+	{id: 8, title: 'Apple iMac 24 Retina 4,5, M1, 8 ГБ, 256 ГБ SSD', price: "129 990", img: "img/8-AppleiMac24Retina4,5K,M1(8CCPU,7CGPU),8ГБ,256ГБSSD,129990₽.png"},
 ];
 
 const renderProduct = (img, title, price) => {
@@ -24,7 +24,7 @@ const renderProduct = (img, title, price) => {
 				<h3 class="products__name">${title}</h3>
                 <img class="products__img" src="${img}" alt="${title}">
                 <div class="products__description">
-                    <p class="products__price">${price}</p>
+                    <p class="products__price">${price} ₽</p>
                     <button class="buy-btn">Купить</button>
                 </div>
                 <!-- /.products__description -->
