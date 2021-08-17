@@ -10,18 +10,15 @@
     @include responsive-padding-top-bottom (40, 30);
     @include responsive-padding-left-right (0, 0);
 
+    &__heading {
+        width: 100%;
+        text-align: center;
+        @include responsive-margin-bottom(40, 30);
+    }
+
 
     .products {
-
         @include display-flex(column, flex-start, flex-start);
-
-        // :nth-child(1) {
-        //     border-top: 9px solid #c9c5c59c;
-        // }
-
-        &:nth-child(1) {
-            border-top: 9px solid #c9c5c59c;
-        }
 
         &__item {
             @include display-flex(row, flex-start, flex-start);
@@ -29,6 +26,10 @@
             @include responsive-padding(20, 15);
             @include responsive-padding-left-right (30, 20);
             border-bottom: 9px solid #c9c5c59c;
+
+            &:nth-child(1) {
+                border-top: 9px solid #c9c5c59c;
+            }
         }
 
 
@@ -67,6 +68,11 @@
             @include responsive-font-size(21, 15);
             @include responsive-line-height(29, 21);
             @include responsive-margin-bottom(12, 8);
+
+            &_old {
+                color: $gray-horizontal-line;
+                text-decoration: line-through;
+            }
 
         }
 

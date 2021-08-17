@@ -2,9 +2,9 @@
 
 const products = [
 
-    {id: 1, title: 'Apple iPhone XR, 128 ГБ, белый', price: "52 990", img: "img/1-AppleiPhoneXR,128ГБ,белый,52990₽.png"},
+    {id: 1, title: 'Apple iPhone XR, 128 ГБ, белый', price: "44 990",  oldPrice: "52 990 ₽", img: "img/1-AppleiPhoneXR,128ГБ,белый,52990₽.png"},
 
-	{id: 4, title: 'Apple iPhone XR, 128 ГБ, (PRODUCT)RED', price: "52 990", img: "img/4-AppleiPhoneXR,128ГБ,(PRODUCT)RED,52990₽.png"},
+	{id: 4, title: 'Apple iPhone XR, 128 ГБ, (PRODUCT)RED', price: "44 990", oldPrice: "52 990 ₽", img: "img/4-AppleiPhoneXR,128ГБ,(PRODUCT)RED,52990₽.png"},
 
 	{id: 2, title: 'Apple iPhone 11, 256 ГБ, фиолетовый', price: "67 990", img: "img/2-AppleiPhone11,256ГБ,фиолетовый,67990₽.png"},
 
@@ -14,17 +14,18 @@ const products = [
 
 	{id: 5, title: 'Apple Watch Series 6, 44 мм', price: "39 490", img: "img/5-AppleWatchSeries6,44мм,39490₽.png"},
 
-	{id: 7, title: 'Apple MacBook Pro 13 (M1, 2020) 8ГБ, 512 ГБ SSD', price: "13 7990", img: "img/7-AppleMacBookPro13(M1,2020)8ГБ,512ГБSSD,137990₽.png"},
+	{id: 7, title: 'Apple MacBook Pro 13 (M1, 2020) 8ГБ, 512 ГБ SSD', price: "137 990", oldPrice: "140 990 ₽", img: "img/7-AppleMacBookPro13(M1,2020)8ГБ,512ГБSSD,137990₽.png"},
 
 	{id: 8, title: 'Apple iMac 24 Retina 4,5, M1, 8 ГБ, 256 ГБ SSD', price: "129 990", img: "img/8-AppleiMac24Retina4,5K,M1(8CCPU,7CGPU),8ГБ,256ГБSSD,129990₽.png"},
 ];
 
-const renderProduct = (img, title, price) => {
+const renderProduct = (img, title, price, oldPrice = "") => {
     return `<div class="products__item">
 				<h3 class="products__name">${title}</h3>
                 <img class="products__img" src="${img}" alt="${title}">
                 <div class="products__description">
                     <p class="products__price">${price} ₽</p>
+					<p class="products__price products__price_old">${oldPrice}</p>
                     <button class="buy-btn">Купить</button>
                 </div>
                 <!-- /.products__description -->
@@ -34,7 +35,7 @@ const renderProduct = (img, title, price) => {
 // в теле функции - с помощью .map - для каждого нашего объекта 
 // на выходе получаем новый массив productsList - содержащий элементы уже с версткой 
 const renderPage = list => {
-    const productsList = list.map(item => renderProduct(item.img, item.title, item.price));
+    const productsList = list.map(item => renderProduct(item.img, item.title, item.price, item.oldPrice));
     // item - каждый элемент нашего массива 
     console.log(productsList);
     // обращаемся к тегу div с классом .products - и в верстке этого элемента вставляем наш массив товаров с версткой 
