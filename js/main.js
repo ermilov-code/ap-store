@@ -37,9 +37,27 @@ class ProductsList {
 	// Добавьте для ProductsList метод, определяющий суммарную стоимость всех товаров.
 
 	totalCost() {
+
 		let price = this.goods.map((item) => item.price);
+		console.log(price);
 
+		// убираем пробелы в строках
+		let priceNumber = price.map((item) => item.split(' ').join(''));
+		console.log(priceNumber);
 
+		// преобразуем строку в число
+		let priceTypeNumber = priceNumber.map((item) => Number(item));
+		console.log(priceTypeNumber);
+
+		// функция для нахождения суммы чисел в массиве
+		let arraySum = (array) => {
+			let sum = 0;
+			for (var i = 0; i < array.length; i++) {
+				sum += array[i];
+			}
+			console.log(sum);
+			return sum;
+		}
 
 
 		// function arraySum(array) {
@@ -50,9 +68,8 @@ class ProductsList {
 		// 	console.log(sum);
 		// }
 
-		// arraySum(price);
-
-		// console.log(price);
+		arraySum(priceTypeNumber);
+		// return sum;
 	}
 
 
