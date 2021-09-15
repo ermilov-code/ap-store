@@ -21,6 +21,7 @@
         @include display-flex(column, flex-start, flex-start);
 
         &__item {
+            width: 100%;
             @include display-flex(row, flex-start, flex-start);
             // flex-wrap: wrap;
             @include responsive-padding(20, 15);
