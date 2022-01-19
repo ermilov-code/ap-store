@@ -23,8 +23,6 @@ body._lock {
 /* ------------------ */
 /* ------------------ */
 
-
-
 .header {
     position: fixed;
     top: 0;
@@ -77,12 +75,26 @@ body._lock {
         }
     }
 
+    // .btn-tot-cost {
+    //     // background-color: rgba(21, 31, 40, 0.6);
+    //     color: $text-color;
+    //     font-family: 'Roboto';
+    //     font-weight: 300;
+    //     font-style: normal;
+    //     text-align: normal;
+    //     @include responsive-font-size(21, 15);
+    //     @include responsive-line-height(29, 21);
+    //     @include responsive-padding-left-right(17, 13);
+    //     @include responsive-padding-top-bottom(8, 4);
+    //     border: 0.8px solid $background-color;
+    //     border-radius: 3px;
+    // }
+
     &__menu {
         @include display-flex(row, flex-start, center);
         flex-wrap: nowrap;
     }
 }
-
 
 .logo {
     height: 35px;
@@ -137,8 +149,6 @@ body._lock {
 
 
 }
-
-
 
 .menu {
     &__icon {

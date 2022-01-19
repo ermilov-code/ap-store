@@ -36,7 +36,46 @@ class ProductsList {
 
 	// Добавьте для ProductsList метод, определяющий суммарную стоимость всех товаров.
 
-	totalCost() {
+	// ================ МОЙ ВАРИАНТ:
+	// totalCost() {
+
+	// 	let price = this.goods.map((item) => item.price);
+	// 	console.log(price);
+
+	// 	// убираем пробелы в строках
+	// 	let priceNumber = price.map((item) => item.split(' ').join(''));
+	// 	console.log(priceNumber);
+
+	// 	// преобразуем строку в число
+	// 	let priceTypeNumber = priceNumber.map((item) => Number(item));
+	// 	console.log(priceTypeNumber);
+
+	// 	// функция для нахождения суммы чисел в массиве
+	// 	let arraySum = (array) => {
+	// 		let sum = 0;
+	// 		for (var i = 0; i < array.length; i++) {
+	// 			sum += array[i];
+	// 		}
+	// 		console.log(sum);
+	// 		return sum;
+	// 	}
+
+	// 	// function arraySum(array) {
+	// 	// 	var sum = 0;
+	// 	// 	for (var i = 0; i < array.length; i++) {
+	// 	// 		sum += array[i];
+	// 	// 	}
+	// 	// 	console.log(sum);
+	// 	// }
+
+	// 	arraySum(priceTypeNumber);
+	// 	// return sum;
+	// }
+
+	// ================ ВАРИАНТ ПРАВИЛЬНЫЙ:
+	// многие использовали циклы, многие использовали for each
+
+	getSum() {
 
 		let price = this.goods.map((item) => item.price);
 		console.log(price);
@@ -49,27 +88,9 @@ class ProductsList {
 		let priceTypeNumber = priceNumber.map((item) => Number(item));
 		console.log(priceTypeNumber);
 
-		// функция для нахождения суммы чисел в массиве
-		let arraySum = (array) => {
-			let sum = 0;
-			for (var i = 0; i < array.length; i++) {
-				sum += array[i];
-			}
-			console.log(sum);
-			return sum;
-		}
-
-
-		// function arraySum(array) {
-		// 	var sum = 0;
-		// 	for (var i = 0; i < array.length; i++) {
-		// 		sum += array[i];
-		// 	}
-		// 	console.log(sum);
-		// }
-
-		arraySum(priceTypeNumber);
-		// return sum;
+		// reduce используется для последовательной обработки каждого элемента массива с сохранением промежуточного результата. (в каждом массиве есть встроенное свойство)
+		let res = priceTypeNumber.reduce((sum, item) => sum += item, 0);
+		alert(`Суммарная стоимость всех товаров магазина = ${res} рублей`);
 	}
 
 
@@ -133,14 +154,24 @@ class basketGoods {
 
 	}
 
+	// добавить товары в корзину
+	addGoods() {
+
+	}
+
+	// удалить товар из корзины 
+	removeGoods() {
+
+	}
+
+	// изменить 
+	changeGoods() {
+
+	}
+
 	// метод для очистки корзины
 	// сумма товаров в корзине 
-
-
-
 }
-
-
 
 // класс для элемента корзины товаров
 class basketItem {
@@ -156,12 +187,12 @@ class basketItem {
 }
 
 
-
-
-
-
-
 let list = new ProductsList();
+
+getSum33.onclick = () => list.getSum();
+
+
+
 
 
 
