@@ -15,6 +15,7 @@ class ProductsList {
 	}
 	_fetchProduct() {
 		// обращаемся к полям класса; присваиваем наш массив 
+		// сейчас у нас товары статические - а оптимально хранить товары именно в формате JSON - где-нибудь на сервере - нужно научиться работать с внешними файлами (для этого нужен AJAX)
 		this.goods = [
 			{ id: 1, title: 'Apple iPhone XR, 128 ГБ, белый', price: "44 990", oldPrice: "52 990 ₽", img: "img/1-AppleiPhoneXR,128ГБ,белый,52990₽.png" },
 
@@ -35,42 +36,6 @@ class ProductsList {
 	}
 
 	// Добавьте для ProductsList метод, определяющий суммарную стоимость всех товаров.
-
-	// ================ МОЙ ВАРИАНТ:
-	// totalCost() {
-
-	// 	let price = this.goods.map((item) => item.price);
-	// 	console.log(price);
-
-	// 	// убираем пробелы в строках
-	// 	let priceNumber = price.map((item) => item.split(' ').join(''));
-	// 	console.log(priceNumber);
-
-	// 	// преобразуем строку в число
-	// 	let priceTypeNumber = priceNumber.map((item) => Number(item));
-	// 	console.log(priceTypeNumber);
-
-	// 	// функция для нахождения суммы чисел в массиве
-	// 	let arraySum = (array) => {
-	// 		let sum = 0;
-	// 		for (var i = 0; i < array.length; i++) {
-	// 			sum += array[i];
-	// 		}
-	// 		console.log(sum);
-	// 		return sum;
-	// 	}
-
-	// 	// function arraySum(array) {
-	// 	// 	var sum = 0;
-	// 	// 	for (var i = 0; i < array.length; i++) {
-	// 	// 		sum += array[i];
-	// 	// 	}
-	// 	// 	console.log(sum);
-	// 	// }
-
-	// 	arraySum(priceTypeNumber);
-	// 	// return sum;
-	// }
 
 	// ================ ВАРИАНТ ПРАВИЛЬНЫЙ:
 	// многие использовали циклы, многие использовали for each
