@@ -1,5 +1,8 @@
 // _header.scss ____________________________
 
+.modal-backdrop {
+    z-index: 9;
+}
 
 html,
 body {
@@ -209,17 +212,7 @@ body._lock {
     }
 }
 
-.basket {
-    background-color: $background-color;
-    width: 24px;
-    // @include responsive-height (70, 50);
-    z-index: 10;
-    @include responsive-margin-right (25, 22);
 
-    &__img {
-        fill: $text-color-white-on-black;
-    }
-}
 
 // body для memu
 body {
@@ -415,6 +408,19 @@ body {
         font-size: 20px;
         color: #000;
     }
+
+    .basket {
+        background-color: $background-color;
+        width: 24px;
+        // @include responsive-height (70, 50);
+        z-index: 10;
+        @include responsive-margin-right (25, 22);
+
+        &__img {
+            fill: $text-color-white-on-black;
+        }
+    }
+
 }
 
 // / header для menu

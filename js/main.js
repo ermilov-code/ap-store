@@ -104,10 +104,27 @@ class ProductItem {
 // 2. Добавьте для GoodsList метод, определяющий суммарную стоимость всех товаров.
 
 // класс для корзины товаров
-class basketGoods {
+class BasketGoods {
+	constructor(container = '.items-cart') {
+		this.container = container;
+		// массив элементов корзины:
+		this.arrayCartItems = [];
+		// массив с версткой элементов корзины:
+		this.layoutCartItems = [];
+		// хотим заполнить наш массив товарами отложенными в корзину 
+		this._fetchProductCart()
+			.then(data => {
+				this.arrayCartItems = [...data];
+				this.render()
+			});
+	}
 
-	constructor() {
-
+	_fetchProductCart() {
+		return fetch(`${API}/getBasket.json`)
+			.then(result => result.json())
+			.catch(error => {
+				console.log(error);
+			})
 	}
 
 	// добавить товары в корзину
@@ -129,6 +146,15 @@ class basketGoods {
 	// сумма товаров в корзине 
 }
 
+
+
+
+
+
+
+
+
+
 // класс для элемента корзины товаров
 class basketItem {
 
@@ -144,6 +170,8 @@ class basketItem {
 
 
 let list = new ProductsList();
+let listCart = new BasketGoods();
+
 
 getSum33.onclick = () => list.getSum();
 

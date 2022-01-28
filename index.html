@@ -42,12 +42,41 @@
                 </a>
 
                 <div class="header__menu menu">
-                    <button class="basket" type="button">
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary basket" data-toggle="modal"
+                        data-target="#exampleModalBasket">
                         <svg class="basket__img" xmlns="http://www.w3.org/2000/svg" viewBox="0 -11 414.002 414">
                             <path
                                 d="M202.48 352.133c0-21.801-17.671-39.473-39.468-39.473-21.801 0-39.473 17.672-39.473 39.469 0 21.8 17.672 39.473 39.473 39.473 21.785-.024 39.445-17.68 39.468-39.47zm-64.94 0c0-14.07 11.401-25.473 25.472-25.473 14.066 0 25.468 11.403 25.468 25.469 0 14.07-11.402 25.473-25.468 25.473-14.063-.016-25.457-11.41-25.473-25.47zm0 0M309.168 391.602c21.8.003 39.473-17.668 39.473-39.47.004-21.8-17.668-39.472-39.47-39.472S269.7 330.332 269.7 352.133c.028 21.785 17.68 39.441 39.469 39.469zm0-64.942c14.066 0 25.473 11.403 25.473 25.469.004 14.066-11.403 25.473-25.47 25.473s-25.472-11.403-25.472-25.47c.016-14.058 11.41-25.452 25.469-25.472zm0 0M7 14h42.7c14.05-.055 26.03 10.176 28.171 24.066l33.8 213.512c3.192 20.703 21.052 35.957 42 35.875h208.93a7.001 7.001 0 0 0 0-14h-208.93c-14.05.055-26.03-10.18-28.171-24.066l-5.746-36.301h213.98c18.118-.008 34.243-11.484 40.18-28.598l39.7-114.578A6.997 6.997 0 0 0 407 60.613H95.613L91.7 35.875C88.508 15.172 70.65-.082 49.7 0H7a7.001 7.001 0 0 0 0 14zm390.164 60.617l-36.476 105.285a28.54 28.54 0 0 1-26.954 19.184H117.535L97.828 74.613zm0 0" />
                         </svg>
                     </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalBasket" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body ">
+                                    <div class="items-cart">
+
+                                    </div>
+                                    <!-- /.items-cart -->
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="menu__icon">
                         <span></span>
                     </div>
