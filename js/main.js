@@ -1,5 +1,8 @@
 // ======================================================
 
+// указываем в самом верху константу API - путь к репозиторию (файлу) - репозиторий должен быть Public - в файле json нажимаем кнопку Raw - и копируем ссылку (общую)
+const API = "https://raw.githubusercontent.com/ermilov-code/ap-store/main/json"
+
 
 class ProductsList {
 	constructor(container = '.products') {
