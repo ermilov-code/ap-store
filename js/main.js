@@ -114,7 +114,8 @@ class BasketGoods {
 		// хотим заполнить наш массив товарами отложенными в корзину 
 		this._fetchProductCart()
 			.then(data => {
-				this.arrayCartItems = [...data];
+				// здесь мы получаем 
+				this.arrayCartItems = data.contents;
 				this.render()
 			});
 	}
@@ -125,6 +126,15 @@ class BasketGoods {
 			.catch(error => {
 				console.log(error);
 			})
+	}
+
+	render() {
+		const block = document.querySelector(this.container);
+		for (let product of this.arrayCartItems) {
+			const productObj = new BasketItem(product);
+			this.layoutCartItems.push(productObj);
+			block.insertAdjacentHTML('beforeend', productObj.render());
+		}
 	}
 
 	// добавить товары в корзину
@@ -147,25 +157,42 @@ class BasketGoods {
 }
 
 
-
-
-
-
-
-
-
-
 // класс для элемента корзины товаров
-class basketItem {
+class BasketItem {
 
-	constructor() {
+	constructor(product) {
+		this.title = product.title;
+		this.id = product.id;
+		this.img = product.img;
+		this.price = product.price;
+		this.oldPrice = product.oldPrice;
+	}
 
+	render() {
+		return `
+		<div class="products__item">
+		<h3 class="products__name">${this.title}</h3>
+		<img class="products__img" src="${this.img}"
+			alt="${this.title}">
+		<div class="products__description">
+			<div class="products__description_control">
+				<button class="buy-btn">Удалить</button>
+			</div>
+			<!-- /.products__description_control -->
+			<div class="products__description_prices">
+				<p class="products__price products__price_old">${this.oldPrice}</p>
+				<p class="products__price">${this.price} ₽</p>
+			</div>
+			<!-- /.products__description_prices -->
+		</div>
+		<!-- /.products__description -->
+	</div>
+		`
 	}
 
 	// удалить товар из корзины
 	// количество товара в корзине
 	// изменить количество товара в корзине 
-
 }
 
 

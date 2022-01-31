@@ -53,12 +53,12 @@
                     </button>
 
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModalBasket" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
+                    <div class="modal fade shopping-cart" id="exampleModalBasket" tabindex="-1"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Корзина</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -66,12 +66,22 @@
                                 <div class="modal-body ">
                                     <div class="items-cart">
 
+
                                     </div>
                                     <!-- /.items-cart -->
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    <div class="modal-footer__info-wrapper">
+                                        <p class="modal-footer__cost-goods-p">
+                                            Стоимость товаров:
+                                        </p>
+                                        <span class="modal-footer__cost-goods-rubles">
+                                            х
+                                        </span>
+                                    </div>
+                                    <!-- /.modal-footer__info-wrapper -->
+                                    <button type="button" class="btn btn-secondary btn-close"
+                                        data-dismiss="modal">Закрыть</button>
                                 </div>
                             </div>
                         </div>

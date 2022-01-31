@@ -426,6 +426,101 @@ body {
 // / header для menu
 
 
+.shopping-cart {
+
+    .modal-title {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+    }
+
+    .modal-header {
+        border-bottom: 9px solid #c9c5c59c;
+    }
+
+    .modal-footer {
+        @include display-flex(column, flex-start, flex-start);
+        border-top: 9px solid #c9c5c59c;
+
+        &__info-wrapper {
+            width: 100%;
+            @include display-flex(row, space-between, center);
+            margin: 0 0 10px 0;
+        }
+
+        &__cost-goods-p {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+        }
+
+        &__cost-goods-rubles {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+        }
+    }
+
+    .btn-close {
+        width: 100%;
+        text-align: center;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        color: $text-color;
+        background-color: $accent-color;
+        padding: 8px;
+        margin: 0px;
+    }
+
+    .products__item {
+        @include display-flex(row, flex-start, flex-start);
+        border-bottom: 1px solid #c9c5c59c;
+        padding-bottom: 10px;
+    }
+
+    .products__img {
+        max-width: 40%;
+        order: -1;
+    }
+
+    .products__name {
+        font-family: Roboto;
+        max-width: 60%;
+        font-size: 14px;
+        line-height: 21px;
+        margin-top: 16px;
+        padding-left: 10px;
+    }
+
+    .products__description {
+
+        width: 100%;
+        @include display-flex(row, space-between, center);
+
+        &_control {}
+
+        .buy-btn {
+            font-family: Roboto;
+            margin-left: 15px;
+            background-color: transparent;
+            color: rgb(182, 182, 182);
+        }
+
+        &_prices {
+
+            .products__price {}
+
+            .products__price_old {
+                color: #b6b6b6;
+                text-decoration: line-through;
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+
+
 
 
 
