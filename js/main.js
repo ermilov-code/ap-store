@@ -219,7 +219,7 @@ class CartItem extends Item {
 			alt="${this.title}">
 		<div class="products__description">
 			<div class="products__description_control">
-				<button class="buy-btn">Удалить</button>
+				
 			</div>
 			<!-- /.products__description_control -->
 			<div class="products__description_prices">
