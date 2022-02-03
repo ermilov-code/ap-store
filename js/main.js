@@ -75,7 +75,7 @@ class Item {
 	// объект event - target 
 	render() {
 		return `
-		<div class="products__item" data-id="${this.id}>
+		<div class="products__item" data-id="${this.id}">
 		 	<h3 class="products__name">${this.title}</h3>
 		 	<img class="products__img" src="${this.img}" alt="${this.title}">
 			<div class="products__description">
@@ -84,7 +84,8 @@ class Item {
 				<button class="buy-btn"
 				data-id="${this.id}"
 				data-title="${this.title}"
-				data-price="${this.price}
+				data-price="${this.price}"
+				data-img="${this.img}"
 				data-oldPrice="${this.oldPrice}">Купить</button>
 			</div>
 			<!-- /.products__description -->
@@ -152,6 +153,7 @@ class Cart extends List {
 							price: +element.dataset['price'],
 							oldPrice: +element.dataset['oldPrice'],
 							title: element.dataset['title'],
+							img: element.dataset['img'],
 							quantity: 1
 						};
 						this.goods = [product];
@@ -190,8 +192,8 @@ class Cart extends List {
 	_updateCart(product) {
 		// вывод данных в нашем всплывающем окне - перерисовываем нашу корзинку 
 		let block = document.querySelector(`.cart-item[data-id="${product.id}"]`);
-		block.querySelector('.product-quantity').textContent = `Quantity: ${product.quantity}`;
-		block.querySelector('.product-price').textContent = `$${product.quantity * product.price}`;
+		block.querySelector('.product-quantity').textContent = `${product.quantity}`;
+		block.querySelector('.products__price').textContent = `${product.quantity * product.price} ₽`;
 	}
 	_init() {
 		// document.querySelector('.btn-cart').addEventListener('click', () => {
@@ -213,23 +215,19 @@ class CartItem extends Item {
 	}
 	render() {
 		return `
-	<div class="products__item cart-item" data-id="${this.id}>
+	<div class="products__item cart-item" data-id="${this.id}">
 		<h3 class="products__name">${this.title}</h3>
 		<img class="products__img" src="${this.img}"
 			alt="${this.title}">
 		<div class="products__description">
 			<div class="products__description_control">
-				
+				<p class="product-quantity">${this.quantity}</p>
+				<p class="product-units"> &#215; ${this.price}</p>
+				<button class="del-btn" data-id="${this.id}">Удалить</button>
 			</div>
 			<!-- /.products__description_control -->
 			<div class="products__description_prices">
-			    <p class="product-title">${this.title}</p>
-                <p class="product-quantity">Quantity: ${this.quantity}</p>
-                <p class="product-single-price">$${this.price} each</p>
-				<p class="products__price products__price_old">${this.oldPrice}</p>
-				<p class="products__price">${this.price} ₽</p>
-				<p class="product-price">$${this.quantity * this.price}</p>
-				<button class="del-btn" data-id="${this.id}">&times;</button>
+				<p class="products__price">${this.quantity * this.price} ₽</p>
 			</div>
 			<!-- /.products__description_prices -->
 		</div>

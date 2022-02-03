@@ -498,7 +498,11 @@ body {
         width: 100%;
         @include display-flex(row, space-between, center);
 
-        &_control {}
+        &_control {
+            width: 50%;
+            @include display-flex(row, flex-start, center);
+
+        }
 
         .buy-btn {
             font-family: Roboto;
@@ -509,6 +513,9 @@ body {
 
         &_prices {
 
+            width: 50%;
+            @include display-flex(row, flex-end, center);
+
             .products__price {}
 
             .products__price_old {
@@ -518,6 +525,39 @@ body {
             }
         }
     }
+
+    .del-btn {
+        font-family: Roboto;
+        font-size: 13px;
+        line-height: 19px;
+        background-color: transparent;
+        margin: 0 15px 0 15px;
+        color: gray;
+    }
+
+    .product-units,
+    .product-quantity {
+        margin-left: 4px;
+        font-family: Roboto;
+        font-size: 13px;
+        line-height: 19px;
+        color: gray;
+    }
+
+
+}
+
+.cart-item {
+
+    .products__price {
+        font-family: Roboto;
+        font-size: 14px;
+        line-height: 21px;
+    }
+}
+
+.shopping-cart .modal-footer__info-wrapper {
+    display: none;
 }
 
 
