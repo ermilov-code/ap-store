@@ -242,10 +242,10 @@ class CartItem extends Item {
 
 // объект list2 - в нем два свойства 
 const list2 = {
-    // в этом списке каталога товаров ProductsList - каждый элемент является объектом класса ProductItem
-    ProductsList: ProductItem,
-    // Cart - название класса для работы со списком товаров в корзинке - CartItem - название класса для каждого товара корзины 
-    Cart: CartItem
+	// в этом списке каталога товаров ProductsList - каждый элемент является объектом класса ProductItem
+	ProductsList: ProductItem,
+	// Cart - название класса для работы со списком товаров в корзинке - CartItem - название класса для каждого товара корзины 
+	Cart: CartItem
 };
 
 // объект cart (делаем объект класса Cart) - у нас вызывается констркутор класса Cart 
