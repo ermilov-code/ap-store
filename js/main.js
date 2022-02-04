@@ -162,6 +162,7 @@ class Cart extends List {
 						this.goods = [product];
 						this.render();
 						this._numberItemsCart();
+						this._amountItemsCart();
 					}
 				} else {
 					alert('Error');
@@ -188,6 +189,7 @@ class Cart extends List {
 						// затем удаляем его визуально из верстки 
 						document.querySelector(`.cart-item[data-id="${productId}"]`).remove();
 						this._numberItemsCart();
+						this._amountItemsCart();
 					}
 				} else {
 					alert('Error');
@@ -199,7 +201,8 @@ class Cart extends List {
 		let block = document.querySelector(`.cart-item[data-id="${product.id}"]`);
 		block.querySelector('.product-quantity').textContent = `${product.quantity}`;
 		block.querySelector('.products__price').textContent = `${product.quantity * product.price} ₽`;
-		this._numberItemsCart()
+		this._numberItemsCart();
+		this._amountItemsCart();
 	}
 
 	// хочу написать функцию _numberItemsCart(), чтобы над значком корзинки обновлялась цифра о количестве товаров в корзине 
@@ -210,6 +213,17 @@ class Cart extends List {
 		console.log(quantityArray.reduce(reducer, 0));
 		let quantityItems = document.querySelector('.basket__numberItemsCart');
 		quantityItems.textContent = quantityArray.reduce(reducer, 0);
+	}
+
+	// хочу написать функцию, которая будет отображать суммарную стоимость всех товаров в корзине 
+	_amountItemsCart() {
+		// массив со всеми стоимостями 
+		let priceArray = this.allProducts.map((item) => item.quantity * item.price);
+		console.log(priceArray);
+		let reducer = (previousValue, currentValue) => previousValue + currentValue;
+		console.log(priceArray.reduce(reducer, 0));
+		let blockTotalCost = document.querySelector('.modal-footer__cost-goods-rubles');
+		blockTotalCost.textContent = priceArray.reduce(reducer, 0);
 	}
 
 	_init() {
