@@ -422,164 +422,170 @@ body {
         }
 
         &__numberItemsCart {
+            // padding: 3px;
+            min-width: 20px;
+            min-height: 20px;
             position: absolute;
-            top: -16px;
-            left: 24px;
+            top: -12px;
+            left: 18px;
             font-family: Roboto;
             font-style: normal;
             font-weight: normal;
-            color: #ff208a;
-            font-size: 13px;
-            line-height: 23px;
-        }
-    }
-
-}
-
-// / header для menu
-
-
-.shopping-cart {
-
-    .modal-title {
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-    }
-
-    .modal-header {
-        border-bottom: 9px solid #c9c5c59c;
-    }
-
-    .modal-footer {
-        @include display-flex(column, flex-start, flex-start);
-        border-top: 9px solid #c9c5c59c;
-
-        &__info-wrapper {
-            width: 100%;
-            @include display-flex(row, space-between, center);
-            margin: 0 0 10px 0;
+            color: $text-color;
+            font-size: 10px;
+            line-height: 19px;
+            border: 1px solid $accent-color;
+            border-radius: 50%;
+            background-color: #151F28;
+            // transition: all 2s ease 0s;
         }
 
-        &__cost-goods-p {
+    }
+
+    // / header для menu
+
+
+    .shopping-cart {
+
+        .modal-title {
             font-family: Roboto;
             font-style: normal;
             font-weight: normal;
         }
 
-        &__cost-goods-rubles {
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: bold;
-        }
-    }
-
-    .btn-close {
-        width: 100%;
-        text-align: center;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        color: $text-color;
-        background-color: $accent-color;
-        padding: 8px;
-        margin: 0px;
-    }
-
-    .products__item {
-        @include display-flex(row, flex-start, flex-start);
-        border-bottom: 1px solid #c9c5c59c;
-        padding-bottom: 10px;
-    }
-
-    .products__img {
-        max-width: 40%;
-        order: -1;
-    }
-
-    .products__name {
-        font-family: Roboto;
-        max-width: 60%;
-        font-size: 14px;
-        line-height: 21px;
-        margin-top: 16px;
-        padding-left: 10px;
-    }
-
-    .products__description {
-
-        width: 100%;
-        @include display-flex(row, space-between, center);
-
-        &_control {
-            width: 50%;
-            @include display-flex(row, flex-start, center);
-
+        .modal-header {
+            border-bottom: 9px solid #c9c5c59c;
         }
 
-        .buy-btn {
-            font-family: Roboto;
-            margin-left: 15px;
-            background-color: transparent;
-            color: rgb(182, 182, 182);
-        }
+        .modal-footer {
+            @include display-flex(column, flex-start, flex-start);
+            border-top: 9px solid #c9c5c59c;
 
-        &_prices {
+            &__info-wrapper {
+                width: 100%;
+                @include display-flex(row, space-between, center);
+                margin: 0 0 10px 0;
+            }
 
-            width: 50%;
-            @include display-flex(row, flex-end, center);
+            &__cost-goods-p {
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+            }
 
-            .products__price {}
-
-            .products__price_old {
-                color: #b6b6b6;
-                text-decoration: line-through;
-                margin-bottom: 8px;
+            &__cost-goods-rubles {
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: bold;
             }
         }
+
+        .btn-close {
+            width: 100%;
+            text-align: center;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            color: $text-color;
+            background-color: $accent-color;
+            padding: 8px;
+            margin: 0px;
+        }
+
+        .products__item {
+            @include display-flex(row, flex-start, flex-start);
+            border-bottom: 1px solid #c9c5c59c;
+            padding-bottom: 10px;
+        }
+
+        .products__img {
+            max-width: 40%;
+            order: -1;
+        }
+
+        .products__name {
+            font-family: Roboto;
+            max-width: 60%;
+            font-size: 14px;
+            line-height: 21px;
+            margin-top: 16px;
+            padding-left: 10px;
+        }
+
+        .products__description {
+
+            width: 100%;
+            @include display-flex(row, space-between, center);
+
+            &_control {
+                width: 50%;
+                @include display-flex(row, flex-start, center);
+
+            }
+
+            .buy-btn {
+                font-family: Roboto;
+                margin-left: 15px;
+                background-color: transparent;
+                color: rgb(182, 182, 182);
+            }
+
+            &_prices {
+
+                width: 50%;
+                @include display-flex(row, flex-end, center);
+
+                .products__price {}
+
+                .products__price_old {
+                    color: #b6b6b6;
+                    text-decoration: line-through;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+
+        .del-btn {
+            font-family: Roboto;
+            font-size: 13px;
+            line-height: 19px;
+            background-color: transparent;
+            margin: 0 15px 0 15px;
+            color: gray;
+        }
+
+        .product-units,
+        .product-quantity {
+            margin-left: 4px;
+            font-family: Roboto;
+            font-size: 13px;
+            line-height: 19px;
+            color: gray;
+        }
+
+
     }
 
-    .del-btn {
-        font-family: Roboto;
-        font-size: 13px;
-        line-height: 19px;
-        background-color: transparent;
-        margin: 0 15px 0 15px;
-        color: gray;
+    .cart-item {
+
+        .products__price {
+            font-family: Roboto;
+            font-size: 14px;
+            line-height: 21px;
+        }
     }
 
-    .product-units,
-    .product-quantity {
-        margin-left: 4px;
-        font-family: Roboto;
-        font-size: 13px;
-        line-height: 19px;
-        color: gray;
+    .shopping-cart .modal-footer__info-wrapper {
+        // display: none;
+    }
+
+    button:active {
+        animation: buttonPress 1s;
+        transition: animation 0.8s ease 0s;
     }
 
 
 }
-
-.cart-item {
-
-    .products__price {
-        font-family: Roboto;
-        font-size: 14px;
-        line-height: 21px;
-    }
-}
-
-.shopping-cart .modal-footer__info-wrapper {
-    // display: none;
-}
-
-button:active {
-    animation: buttonPress 1s;
-    transition: animation 0.8s ease 0s;
-}
-
-
-
 
 
 

@@ -223,7 +223,8 @@ class Cart extends List {
 		let reducer = (previousValue, currentValue) => previousValue + currentValue;
 		console.log(priceArray.reduce(reducer, 0));
 		let blockTotalCost = document.querySelector('.modal-footer__cost-goods-rubles');
-		blockTotalCost.textContent = priceArray.reduce(reducer, 0);
+		let finalCost = priceArray.reduce(reducer, 0);
+		blockTotalCost.textContent = `${finalCost.toLocaleString()} ₽`;
 	}
 
 	_init() {
@@ -267,7 +268,6 @@ class CartItem extends Item {
 		`
 	}
 }
-
 
 // объект list2 - в нем два свойства 
 const list2 = {
