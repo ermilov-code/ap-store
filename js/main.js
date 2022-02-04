@@ -141,12 +141,14 @@ class Cart extends List {
 					let productId = +element.dataset['id'];
 					// нужно понять есть ли такой товар уже в корзинке - если есть, то нужно увеличивать его кол-во - если нет - то нужно полностью создавать объект с этим товаром
 					// в нашем массиве allProducts - вызываем метод find - на вход принимает наш объект - мы ищим соответствие между id_product - и productId (айдишник той кнопки, которую нажали)
+					// this._numberItemsCart()
 					let find = this.allProducts.find(product => product.id === productId);
 					if (find) {
 						find.quantity++;
 						// find - передаем на вход наш объект с нашим товаром
+						// this._numberItemsCart()
 						this._updateCart(find);
-						this._numberItemsCart()
+
 					} else {
 						// если не нашли такого товара find - выполняем блок else
 						let product = {
@@ -159,6 +161,7 @@ class Cart extends List {
 						};
 						this.goods = [product];
 						this.render();
+						this._numberItemsCart();
 					}
 				} else {
 					alert('Error');
@@ -184,6 +187,7 @@ class Cart extends List {
 						this.allProducts.splice(this.allProducts.indexOf(find), 1);
 						// затем удаляем его визуально из верстки 
 						document.querySelector(`.cart-item[data-id="${productId}"]`).remove();
+						this._numberItemsCart();
 					}
 				} else {
 					alert('Error');
@@ -195,12 +199,17 @@ class Cart extends List {
 		let block = document.querySelector(`.cart-item[data-id="${product.id}"]`);
 		block.querySelector('.product-quantity').textContent = `${product.quantity}`;
 		block.querySelector('.products__price').textContent = `${product.quantity * product.price} ₽`;
+		this._numberItemsCart()
 	}
 
 	// хочу написать функцию _numberItemsCart(), чтобы над значком корзинки обновлялась цифра о количестве товаров в корзине 
 	_numberItemsCart() {
+		let quantityArray = this.allProducts.map((item) => item.quantity);
+		console.log(quantityArray);
+		let reducer = (previousValue, currentValue) => previousValue + currentValue;
+		console.log(quantityArray.reduce(reducer, 0));
 		let quantityItems = document.querySelector('.basket__numberItemsCart');
-		quantityItems.textContent = 0;
+		quantityItems.textContent = quantityArray.reduce(reducer, 0);
 	}
 
 	_init() {
