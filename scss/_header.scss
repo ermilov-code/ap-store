@@ -410,6 +410,7 @@ body {
     }
 
     .basket {
+        position: relative;
         background-color: $background-color;
         width: 24px;
         // @include responsive-height (70, 50);
@@ -418,6 +419,18 @@ body {
 
         &__img {
             fill: $text-color-white-on-black;
+        }
+
+        &__numberItemsCart {
+            position: absolute;
+            top: -16px;
+            left: 24px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            color: #ff208a;
+            font-size: 13px;
+            line-height: 23px;
         }
     }
 

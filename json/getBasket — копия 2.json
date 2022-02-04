@@ -1,0 +1,23 @@
+{
+    "amount": 182980,
+    "countGoods": 2,
+    "contents": [
+      {
+        "id": 123, 
+        "title": "Apple iPhone XR, 128 ГБ, белый", 
+        "price": 44990, 
+        "oldPrice": 52990, 
+        "img": "img/1-AppleiPhoneXR,128ГБ,белый,52990₽.png",
+        "quantity": 1
+      },
+      {
+        "id": 53654, 
+        "title": "Apple MacBook Pro 13 (M1, 2020) 8ГБ, 512 ГБ SSD", 
+        "price": 137990, 
+        "oldPrice": 140990, 
+        "img": "img/7-AppleMacBookPro13(M1,2020)8ГБ,512ГБSSD,137990₽.png",
+        "quantity": 1
+      }
+    ]
+  }
+

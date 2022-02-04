@@ -146,6 +146,7 @@ class Cart extends List {
 						find.quantity++;
 						// find - передаем на вход наш объект с нашим товаром
 						this._updateCart(find);
+						this._numberItemsCart()
 					} else {
 						// если не нашли такого товара find - выполняем блок else
 						let product = {
@@ -195,6 +196,13 @@ class Cart extends List {
 		block.querySelector('.product-quantity').textContent = `${product.quantity}`;
 		block.querySelector('.products__price').textContent = `${product.quantity * product.price} ₽`;
 	}
+
+	// хочу написать функцию _numberItemsCart(), чтобы над значком корзинки обновлялась цифра о количестве товаров в корзине 
+	_numberItemsCart() {
+		let quantityItems = document.querySelector('.basket__numberItemsCart');
+		quantityItems.textContent = 0;
+	}
+
 	_init() {
 		// document.querySelector('.btn-cart').addEventListener('click', () => {
 		// 	document.querySelector(this.container).classList.toggle('invisible');
