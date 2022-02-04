@@ -279,6 +279,19 @@ $max-width: 1920;
 
 // animation for the wave (smooth appearance)
 
+@keyframes buttonPress {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
 
 
 // ============= ANIMATION templates =============

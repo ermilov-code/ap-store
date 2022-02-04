@@ -560,6 +560,11 @@ body {
     display: none;
 }
 
+button:active {
+    animation: buttonPress 1s;
+    transition: animation 0.8s ease 0s;
+}
+
 
 
 
