@@ -37,10 +37,10 @@ body._lock {
     background-color: $background-color;
 
     &__container {
-        max-width: 1200px;
+        // max-width: 1200px;
         margin: 0px auto;
         display: flex;
-        padding: 0px 0px;
+        // padding: 0px 0px;
         align-items: center;
         justify-content: space-between;
         height: 70px;
@@ -160,7 +160,12 @@ body._lock {
 
     &__body {}
 
-    &__list {}
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
 
     &__list>li {
         position: relative;
@@ -496,6 +501,7 @@ body {
             @include display-flex(row, flex-start, flex-start);
             border-bottom: 1px solid #c9c5c59c;
             padding-bottom: 10px;
+
         }
 
         .products__img {
@@ -610,7 +616,9 @@ body {
 @media (min-width: 1200px) {}
 
 // XX-Large devices (larger desktops, 1400px and up)
-@media (min-width: 1400px) {}
+@media (min-width: 1400px) {
+   
+}
 
 
 

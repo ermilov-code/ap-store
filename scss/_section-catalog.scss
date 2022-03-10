@@ -22,6 +22,7 @@
 
         &__item {
             width: 100%;
+            max-width: 420px;
             @include display-flex(row, flex-start, flex-start);
             // flex-wrap: wrap;
             @include responsive-padding(20, 15);
@@ -91,7 +92,34 @@
         }
 
     }
+
+    // XX-Large devices (larger desktops, 1400px and up)
+    @media (min-width: 1300px) {
+
+        .products {
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-start;
+
+        }
+
+        .products__item {
+            max-width: 420px;
+            min-height: 320px;
+        }
+
+        .products__item:first-child {
+            border-top: 0px solid #c9c5c59c;
+        }
+
+
+
+
+    }
 }
+
+
+
 
 
 
